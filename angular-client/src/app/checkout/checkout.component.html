@@ -1,0 +1,58 @@
+<div class="container" style="width: 50%;">
+  <h2>Credit/Debit card validation</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="right-payment-sec">
+        <form id="checkoutForm">        
+          <div class="row">
+              <div class="col-lg-12 col-xs-12">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Name On Card</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name On Card">                    
+                  </div>
+              </div>
+              <div class="col-lg-12 col-xs-12">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Card Number</label>
+                      <input type="text" class="form-control"
+                       id="exampleInputEmail1" placeholder="XXXX-XXXX-XXXX-XXXX">
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 xol-sm-6 col-xs-12">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Expiration Month</label>
+                      <input type="text" class="form-control" id="exampleExpirationMonth" placeholder="12">                      
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 xol-sm-6 col-xs-12">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Expiration Year</label>
+                      <input type="text" class="form-control" id="exampleExpirationYear" placeholder="2025">                      
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 xol-sm-6 col-xs-12">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Security Code</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Security Code">                      
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 xol-sm-6 col-xs-12">
+                  <div class="form-group">
+                      <label for="exampleInputEmail1">Zip Code</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Zip Code">                   
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-6 xol-sm-6 col-xs-12">
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary" style="margin-right: 10px ;" (click)="onCheckoutSubmit()">Save</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div id="stolenCardWarning">
+            <h2>Used Stolen Credit Card. Please contact support to checkout support@thisapp.com</h2>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>>

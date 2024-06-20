@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="/">MeanAuthApp</a>
+  <a class="navbar-brand" routerLink="/">Ticket Purchase App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsMeanAuthApp" aria-controls="navbarsMeanAuthApp" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,6 +23,10 @@
       <li *ngIf="!authService.loggedIn()" class="nav-item">
         <a class="nav-link" [routerLink]="['/register']">Register</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/checkout']">Checkout</a>
+      </li>
+      <li>
       <li *ngIf="authService.loggedIn()" class="nav-item">
         <a class="nav-link" (click)="onLogoutClick()" href="#">Logout</a>
       </li>

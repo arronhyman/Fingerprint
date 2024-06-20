@@ -1,4 +1,4 @@
-#maxLoginWarning{
+#stolenCardWarning{
     background: gray;
     font: 25px;
     font-weight: 900;
@@ -7,6 +7,6 @@
     height:200px;
     display: none;
 }
-#maxLoginWarning p{
+#stolenCardWarning h2{
     padding-top: 95px;
 }

@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
+const fetch = require( "node-fetch");
 
 const UserSchema = mongoose.Schema({
     name : {
@@ -17,6 +18,10 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    devices : {
+        type: Array,
+        required: false
+    }
 });
 
 const User = module.exports = mongoose.model("User", UserSchema);
@@ -47,6 +52,7 @@ module.exports.addUser = function(newUser, callback){
                     callback(new Error("Email already registered."), user);
                 }
                 else {
+                    console.log(newUser);
                     bcrypt.genSalt(10, (err, salt) => {
                         bcrypt.hash(newUser.password, salt, (err, hash) => {
                             if(err) throw err;
@@ -65,4 +71,13 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
         if(err) throw err;
         callback(null, isMatch);
     });
+}
+
+module.exports.validateKnownDevice = function(deviceId, user){
+    if(user.devices.includes(deviceId)){
+        return true;
+    }
+    else{
+        return false
+    }
 }

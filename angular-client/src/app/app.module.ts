@@ -13,11 +13,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 import { AuthService } from './_services/auth.service';
 import { AuthGuardService } from './_services/auth-guard.service';
 import { UserService } from './_services/user.service';
-
+import { DeviceService } from './_services/device.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -31,7 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
     DashboardComponent,
     ProfileComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     AuthService,
     AuthGuardService,
-    UserService
+    UserService,
+    DeviceService
   ],
   bootstrap: [AppComponent]
 })
