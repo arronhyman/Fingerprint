@@ -1,4 +1,4 @@
-# MEANAuth - Login App
+# Fingerprint - Login App
 ## Table of Content
 1. [Introduction](#introduction)
 2. [Used versions](#used-versions)
